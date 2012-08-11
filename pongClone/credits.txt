@@ -1,0 +1,4 @@
+Shader loader: Joe Groff (http://duriansoftware.com/joe/), public domain
+Cirle algorithm: SiegeLord's Abode (slabode.exofire.net/circle_draw.shtml), public domain
+Image loader: DevIL (http://openil.sourceforge.net/), LGPL
+

@@ -1,0 +1,20 @@
+CXX = g++
+LDLIBS = -lglut -lGL -lGLEW -lIL -lILU
+
+pong: pong.o Shaders.o Vertex.o Ball.o Paddle.o
+	$(CXX) -o pong pong.o Shaders.o Vertex.o Ball.o Paddle.o $(LDLIBS) 
+
+pong.o: pong.cpp pong.h Shaders.h Ball.h Paddle.h Vertex.h
+	$(CXX) $(LDLIBS) -c pong.cpp
+
+Vertex.o: Vertex.h
+	$(CXX) $(LDLIBS) -c Vertex.cpp
+
+Ball.o: Ball.h Vertex.h
+	$(CXX) $(LDLIBS) -c Ball.cpp
+
+Paddle.o: Paddle.h Vertex.h
+	$(CXX) $(LDLIBS) -c Paddle.cpp
+
+Shaders.o: Shaders.h
+	$(CXX) $(LDLIBS) -c Shaders.cpp
